@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<div class="jumbotron jumbotron-fluid bg-dark text-light">
+  <div class="container">
+    <h1 class="display-5 text-center">Any <span class="text-info">authorized</span> person should be able to <span class="text-info">deploy</span> version into production in <span class="text-info">one</span> click</h1>
+    <p class="lead text-right text-info">It's not achievable,<br/>but this have to be our goal</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12" *ngFor="let section of sections; let i = index">
+      <div class="media m-5">
+        <img class="mr-3" [attr.src]="'assets/img/' + section.image" alt="Generic placeholder image" style="width:48px;height:48px;">
+        <div class="" alt="Generic placeholder image" width="64px" height="64px"></div>
+        <div class="media-body">
+          <h5 class="mt-0">{{section.title}}</h5>
+          {{section.description}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel-footer bg-dark text-info p-1 text-right">
+  <small>v18.9.0</small>
+</div>
+    <!--footer class="footer bg-transparent border-top border-light">
+      <div class="container">
+        <span class="text-dark float-right">v18.9.0</span>
+      </div>
+    </footer-->

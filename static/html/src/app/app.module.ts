@@ -6,16 +6,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
-
+import { routing } from './app.routing';
+import { HomeComponent } from './sections/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    routing,
     NgbModule.forRoot()
   ],
   providers: [],
