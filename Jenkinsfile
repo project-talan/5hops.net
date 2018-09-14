@@ -141,7 +141,7 @@ node {
       if (deploy) {
         if (pullRequest){
         } else {
-          sh "./deploy.sh"
+          sh "./deploy.sh ${CLUSTER}"
         }
       }
     }
