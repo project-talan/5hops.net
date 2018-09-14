@@ -22,11 +22,11 @@ node {
   def repo = ''
   def org = ''
   //
-  def delivery = true;
+  def delivery = false;
   if (env.BUILD_IMAGES) {
     delivery = BUILD_IMAGES.toString().toBoolean();
   }
-  def deploy = true;
+  def deploy = false;
   if (env.CLUSTER) {
     deploy = CLUSTER?.trim();
   }
