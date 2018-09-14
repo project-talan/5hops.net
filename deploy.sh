@@ -2,7 +2,7 @@
 
 VM=$1
 
-ssh ${VM} << OEF
+ssh root@${VM} << OEF
 docker stop $(docker ps -a -q)
 docker rm -f $(docker ps -a -q)
 docker rmi -f $(docker images -q)
