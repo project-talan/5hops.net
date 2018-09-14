@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "org.talan.angular": {
+    "net.5hops.html": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -49,18 +49,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "org.talan.angular:build"
+            "browserTarget": "net.5hops.html:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "org.talan.angular:build:production"
+              "browserTarget": "net.5hops.html:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "org.talan.angular:build"
+            "browserTarget": "net.5hops.html:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "org.talan.angular-e2e": {
+    "net.5hops.html-e2e": {
       "root": "",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -104,7 +104,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "org.talan.angular:serve"
+            "devServerTarget": "net.5hops.html:serve"
           }
         },
         "lint": {
@@ -121,7 +121,7 @@
       }
     }
   },
-  "defaultProject": "org.talan.angular",
+  "defaultProject": "net.5hops.html",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

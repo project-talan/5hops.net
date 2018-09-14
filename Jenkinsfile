@@ -129,15 +129,20 @@ node {
     }
     //
     stage('Delivery') {
-      if (pullRequest){
-      } else {
-        // archiveArtifacts artifacts: 'package/target/*.zip'    
+      if (delivery) {
+        if (pullRequest){
+        } else {
+          sh "./delivery.sh"
+        }
       }
     }
     //
     stage('Deploy') {
-      if (pullRequest){
-      } else {
+      if (deploy) {
+        if (pullRequest){
+        } else {
+          sh "./deploy.sh"
+        }
       }
     }
     //
