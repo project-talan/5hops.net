@@ -11,27 +11,55 @@ export class HomeComponent implements OnInit {
     {
       title: 'Continuous Integration',
       image: 'integration.png',
-      description: '...'
+      description: '...',
+      subSections: [
+        {
+          title: 'Branching model'
+        },
+        {
+          title: 'Release model model'
+        },
+        {
+          title: 'Monoliths vs Service-Oriented Architectures vs Microservices'
+        }
+      ]
     },
     {
       title: 'Continuous Testing',
       image: 'testing.png',
-      description: '...'
+      description: '...',
+      subSections: [
+        {
+          title: 'Unit tests & coverage'
+        },
+        {
+          title: 'Static code analysis'
+        },
+        {
+          title: 'E2e, functional, integration tests & coverage'
+        }
+      ]
     },
     {
       title: 'Continuous Delivery',
       image: 'delivery.png',
-      description: '...'
+      description: '...',
+      subSections: [
+      ]
     },
     {
       title: 'Continuous Deployment',
       image: 'deployment.png',
-      description: '...'
+      description: '...',
+      subSections: [
+      ]
     },
     {
       title: 'Continuous Operation',
       image: 'operation.png',
-      description: '...'
+      description: '...',
+      subSections: [
+      ]
     }
   ];
   constructor() { }
