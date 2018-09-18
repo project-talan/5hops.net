@@ -8,17 +8,23 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-6 p-3" *ngFor="let section of sections; let i = index">
-      <div class="media">
+      <div class="media p-2">
         <img class="mr-3" [attr.src]="'assets/img/' + section.image" alt="Generic placeholder image" style="width:48px;height:48px;">
         <div class="" alt="Generic placeholder image" width="64px" height="64px"></div>
         <div class="media-body">
-          <h5 class="mt-0">{{section.title}}</h5>
+          <h5 class="mt-0">{{i+1}}<sup>{{section.sup}}</sup> hop - {{section.title}}</h5>
           {{section.description}}
           <ul class="list-group ml-2">
-            <li class="list-group-item border-0" *ngFor="let subSection of section.subSections">{{subSection.title}}</li>
+            <li class="list-group-item border-0 p-0" *ngFor="let subSection of section.subSections">{{subSection.title}}</li>
+          </ul>
+          <ul class="list-group mr-5 text-right">
+            <li class="list-group-item border-0 m-0 p-0 mr-5" *ngFor="let link of section.links"><small><a [attr.href]="link.ref">{{link.title}}</a></small></li>
           </ul>
         </div>
       </div>
+    </div>
+    <div class="col-12 p-3 text-center">
+      <img src="assets/img/general-picture.png" class="img-fluid shadow">
     </div>
   </div>
 </div>
