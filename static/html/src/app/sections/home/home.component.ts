@@ -28,8 +28,8 @@ export class HomeComponent implements OnInit {
         }
       ],
       links: [
-        { "title" : "12 factors app", ref: "https://12factor.net/" },
-        { "title" : "microservices.io", ref: "https://microservices.io/" }
+        { title: '12 factors app', ref: 'https://12factor.net/' },
+        { title: 'microservices.io', ref: 'https://microservices.io/' }
       ]
     },
     {
