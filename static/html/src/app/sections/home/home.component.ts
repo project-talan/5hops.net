@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
 
   sections = [
     {
+      sup: 'st',
       title: 'Continuous Integration',
       image: 'integration.png',
       description: '...',
@@ -20,11 +21,19 @@ export class HomeComponent implements OnInit {
           title: 'Release model model'
         },
         {
-          title: 'Monoliths vs Service-Oriented Architectures vs Microservices'
+          title: 'Project structure: Monoliths vs SOA vs Microservices'
+        },
+        {
+          title: '"Waterfall" vs "Agile"'
         }
+      ],
+      links: [
+        { "title" : "12 factors app", ref: "https://12factor.net/" },
+        { "title" : "microservices.io", ref: "https://microservices.io/" }
       ]
     },
     {
+      sup: 'nd',
       title: 'Continuous Testing',
       image: 'testing.png',
       description: '...',
@@ -41,6 +50,7 @@ export class HomeComponent implements OnInit {
       ]
     },
     {
+      sup: 'rd',
       title: 'Continuous Delivery',
       image: 'delivery.png',
       description: '...',
@@ -48,6 +58,7 @@ export class HomeComponent implements OnInit {
       ]
     },
     {
+      sup: 'th',
       title: 'Continuous Deployment',
       image: 'deployment.png',
       description: '...',
@@ -55,6 +66,7 @@ export class HomeComponent implements OnInit {
       ]
     },
     {
+      sup: 'th',
       title: 'Continuous Operation',
       image: 'operation.png',
       description: '...',
