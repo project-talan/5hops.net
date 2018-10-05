@@ -5,8 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { routing } from './app.routing';
-import { HomeComponent } from './sections/home/home.component';
+import { Routing } from './app.routing';
+
+import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -21,8 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    routing,
-    NgbModule.forRoot()
+    Routing,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

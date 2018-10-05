@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './sections/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -9,4 +9,4 @@ const routes: Routes = [
   { path: '**', redirectTo: '' }
 ];
 
-export const routing = RouterModule.forRoot(routes);
+export const Routing = RouterModule.forRoot(routes);
