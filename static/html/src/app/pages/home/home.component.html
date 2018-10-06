@@ -13,7 +13,7 @@
         <div class="" alt="Generic placeholder image" width="64px" height="64px"></div>
         <div class="media-body">
           <h5 class="mt-0">{{i+1}}<sup>{{section.sup}}</sup> hop - {{section.title}}</h5>
-          {{section.description}}
+          <p class="font-weight-bold">{{section.description}}</p>
           <ul class="list-group ml-2">
             <li class="list-group-item border-0 p-0" *ngFor="let subSection of section.subSections">{{subSection.title}}</li>
           </ul>
