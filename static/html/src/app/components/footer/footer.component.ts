@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpResponse, HttpParams, HttpErrorResponse } from '@angular/common/http';
+import { catchError, map, retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  private version: string;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    /*
+    this.http.get('./package.json').pipe(
+      .map(res => res.json())
+    ).subscribe(
+      (v) => {
+        console.log('1');
+        this.version = v.version;
+      },
+      (err) => {
+        console.log('2');
+      },
+      () => {
+        console.log('3');
+      }
+    );
+    */
   }
-
 }

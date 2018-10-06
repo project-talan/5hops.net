@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
       sup: 'st',
       title: 'Continuous Integration',
       image: 'integration.png',
-      description: '...',
+      description: 'This is very first step of fully automated development process',
       subSections: [
         {
           title: 'Branching model'
