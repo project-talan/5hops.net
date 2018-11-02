@@ -14,4 +14,8 @@ export class IntegrationComponent implements OnInit {
     console.log(this.router.url);
   }
 
+  getRouteUrl(): string {
+    return this.router.url;
+  }
+
 }

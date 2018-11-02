@@ -13,4 +13,8 @@ export class DeliveryComponent implements OnInit {
   ngOnInit() {
   }
 
+  getRouteUrl(): string {
+    return this.router.url;
+  }
+
 }
