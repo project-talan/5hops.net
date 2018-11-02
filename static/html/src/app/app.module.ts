@@ -10,13 +10,25 @@ import { Routing } from './app.routing';
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { IntegrationComponent } from './pages/integration/integration.component';
+import { TestingComponent } from './pages/testing/testing.component';
+import { DeliveryComponent } from './pages/delivery/delivery.component';
+import { DeploymentComponent } from './pages/deployment/deployment.component';
+import { OperationComponent } from './pages/operation/operation.component';
+import { FaqComponent } from './pages/faq/faq.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    IntegrationComponent,
+    TestingComponent,
+    DeliveryComponent,
+    DeploymentComponent,
+    OperationComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
