@@ -13,4 +13,8 @@ export class OperationComponent implements OnInit {
   ngOnInit() {
   }
 
+  getRouteUrl(): string {
+    return this.router.url;
+  }
+
 }
