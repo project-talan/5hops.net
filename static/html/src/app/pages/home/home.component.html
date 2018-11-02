@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar [currentSection]="''"></app-navbar>
 <div class="jumbotron jumbotron-fluid bg-dark text-light">
   <div class="container">
     <h1 class="display-5 text-center">Any <span class="text-info">authorized</span> person should be able to <span class="text-info">deploy</span> version into production in <span class="text-info">one</span> click</h1>
@@ -17,9 +17,9 @@
           <ul class="list-group ml-2">
             <li class="list-group-item border-0 p-0" *ngFor="let subSection of section.subSections">{{subSection.title}}</li>
           </ul>
-          <ul class="list-group mr-5 text-right">
-            <li class="list-group-item border-0 m-0 p-0 mr-5" *ngFor="let link of section.links"><small><a [attr.href]="link.ref">{{link.title}}</a></small></li>
-          </ul>
+          <div class="">
+            <span class="p-1 text-secondary" *ngFor="let link of section.links"><small><a class="text-secondary" [attr.href]="link.ref">{{link.title}}</a></small> |</span>
+          </div>
         </div>
       </div>
     </div>
@@ -28,4 +28,3 @@
     </div>
   </div>
 </div>
-<app-footer></app-footer>

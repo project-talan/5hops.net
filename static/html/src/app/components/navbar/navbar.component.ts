@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  @Input() currentSection: string;
+
+  sections = [
+    { title: 'Integration', ref: '/continuous-integration' },
+    { title: 'Testing', ref: '/continuous-testing' },
+    { title: 'Delivery', ref: '/continuous-delivery' },
+    { title: 'Deployment', ref: '/continuous-deployment' },
+    { title: 'Operation', ref: '/continuous-operation' }
+  ];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

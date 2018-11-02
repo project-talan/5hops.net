@@ -2,15 +2,15 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
-import { FooterComponent } from './footer.component';
+import { IntegrationComponent } from './integration.component';
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+describe('IntegrationComponent', () => {
+  let component: IntegrationComponent;
+  let fixture: ComponentFixture<IntegrationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FooterComponent ],
+      declarations: [ IntegrationComponent ],
       schemas: [ NO_ERRORS_SCHEMA ],
       imports: [ RouterTestingModule ]
     })
@@ -18,7 +18,7 @@ describe('FooterComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FooterComponent);
+    fixture = TestBed.createComponent(IntegrationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
