@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Link, SubSection, Section, Toc } from './../../models/toc';
+import { Sections } from './../../app.toc';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,75 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  sections = [
-    {
-      sup: 'st',
-      title: 'Continuous Integration',
-      image: 'integration.png',
-      description: 'This is very first step of fully automated development process',
-      subSections: [
-        {
-          title: 'Branching model'
-        },
-        {
-          title: 'Release model model'
-        },
-        {
-          title: 'Project structure: Monoliths vs SOA vs Microservices'
-        },
-        {
-          title: '"Waterfall" vs "Agile"'
-        }
-      ],
-      links: [
-        { title: '12 factors app', ref: 'https://12factor.net/' },
-        { title: 'microservices.io', ref: 'https://microservices.io/' },
-        { title: 'Data Transfer Project', ref: 'https://datatransferproject.dev/' },
-        { title: 'Solid', ref: 'https://solid.inrupt.com/' }
-      ]
-    },
-    {
-      sup: 'nd',
-      title: 'Continuous Testing',
-      image: 'testing.png',
-      description: '...',
-      subSections: [
-        {
-          title: 'Unit tests & coverage'
-        },
-        {
-          title: 'Static code analysis'
-        },
-        {
-          title: 'E2e, functional, integration tests & coverage'
-        }
-      ]
-    },
-    {
-      sup: 'rd',
-      title: 'Continuous Delivery',
-      image: 'delivery.png',
-      description: '...',
-      subSections: [
-      ]
-    },
-    {
-      sup: 'th',
-      title: 'Continuous Deployment',
-      image: 'deployment.png',
-      description: '...',
-      subSections: [
-      ]
-    },
-    {
-      sup: 'th',
-      title: 'Continuous Operation',
-      image: 'operation.png',
-      description: '...',
-      subSections: [
-      ]
-    }
-  ];
+  sections: Section[] = Sections;
   constructor() { }
 
   ngOnInit() {

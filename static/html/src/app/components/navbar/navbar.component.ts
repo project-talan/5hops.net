@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { Link, SubSection, Section, Toc } from './../../models/toc';
+import { Sections } from './../../app.toc';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,20 +10,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  @Input() currentSection: string;
+  @Input() section: string;
+  @Input() subSection: string;
 
-  sections = [
-    { title: 'Integration', ref: '/continuous-integration' },
-    { title: 'Testing', ref: '/continuous-testing' },
-    { title: 'Delivery', ref: '/continuous-delivery' },
-    { title: 'Deployment', ref: '/continuous-deployment' },
-    { title: 'Operation', ref: '/continuous-operation' }
-  ];
+  sections: Section[] = Sections;
 
   constructor() {
   }
 
   ngOnInit() {
+    console.log(this.section, this.subSection);
   }
 
 }

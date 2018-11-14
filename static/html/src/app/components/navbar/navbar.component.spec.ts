@@ -20,7 +20,8 @@ describe('NavbarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NavbarComponent);
     component = fixture.componentInstance;
-    component.currentSection = '';
+    component.section = '';
+    component.subSection = '';
     fixture.detectChanges();
   });
 

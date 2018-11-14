@@ -11,6 +11,7 @@ import { FaqComponent } from './pages/faq/faq.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'continuous-integration', component: IntegrationComponent },
+  { path: 'continuous-integration/:subSection', component: IntegrationComponent },
   { path: 'continuous-testing', component: TestingComponent },
   { path: 'continuous-delivery', component: DeliveryComponent },
   { path: 'continuous-deployment', component: DeploymentComponent },
