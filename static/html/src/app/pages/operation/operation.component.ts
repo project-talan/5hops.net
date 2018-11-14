@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-operation',
@@ -8,13 +8,20 @@ import { Router } from '@angular/router';
 })
 export class OperationComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  section = '';
+  subSection = '';
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.url.subscribe(url => { this.section = url[0].path; if (url.length > 1) { this.subSection = url[1].path; }} );
   }
 
-  getRouteUrl(): string {
-    return this.router.url;
+  getSection(): string {
+    return `/${this.section}`;
+  }
+
+  getSubSection(): string {
+    return `/${this.subSection}`;
   }
 
 }
