@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.section, this.subSection);
+    // console.log(this.section, this.subSection);
   }
 
 }
