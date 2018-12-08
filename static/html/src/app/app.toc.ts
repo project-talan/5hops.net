@@ -30,6 +30,8 @@ export const Sections: Section[] = [
       { name: '12 factors app', ref: 'https://12factor.net/' },
       { name: 'microservices.io', ref: 'https://microservices.io/' },
       { name: 'A successful Git branching model', ref: 'https://nvie.com/posts/a-successful-git-branching-model/' },
+      { name: 'Polyglot Persistence / Polyglot Programming', ref: 'https://martinfowler.com/bliki/PolyglotPersistence.html' },
+
 
 
 //      { name: 'Data Transfer Project', ref: 'https://datatransferproject.dev/' },
