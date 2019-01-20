@@ -10,16 +10,20 @@ import { Sections } from './../../app.toc';
 })
 export class NavbarComponent implements OnInit {
 
-  @Input() section: string;
-  @Input() subSection: string;
+  @Input() hop: string;
+  @Input() article: string;
 
-  sections: Section[] = Sections;
+  hops: Section[] = Sections;
 
   constructor() {
   }
 
   ngOnInit() {
-    // console.log(this.section, this.subSection);
+/*
+     console.log(this.hop);
+     console.log(this.article);
+     console.log(this.hops);
+*/
   }
 
 }

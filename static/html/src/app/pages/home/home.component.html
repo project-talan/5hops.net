@@ -1,4 +1,4 @@
-<app-navbar [section]="''"  [subSection]="''"></app-navbar>
+<app-navbar [hop]="''"  [article]="''"></app-navbar>
 <div class="jumbotron jumbotron-fluid bg-dark text-light">
   <div class="container">
     <h1 class="display-5 text-center">Any <span class="text-info">authorized</span> person should be able to <span class="text-info">deploy</span> version into production in <span class="text-info">one</span> click</h1>
@@ -9,26 +9,26 @@
   <div class="row">
     <div class="col-12 col-lg-6 p-3" *ngFor="let section of sections; let i = index">
       <div class="media p-2">
-        <a class="navbar-brand" [routerLink]="section.ref">
+        <a class="navbar-brand" [routerLink]="['/', 'continuous', section.id]">
           <img class="mr-3 home__section-icon" [attr.src]="'assets/img/' + section.image">
         </a>
         <div class="media-body">
-          <a class="navbar-brand" [routerLink]="section.ref">
+          <a class="navbar-brand" [routerLink]="['/', 'continuous', section.id]">
             <h5 class="mt-0 text-body">{{i+1}}<sup>{{section.sup}}</sup> hop - {{section.title}}</h5>
           </a>
           <p class="font-weight-bold">{{section.description}}</p>
           <ul class="list-group ml-2">
             <li class="list-group-item border-0 p-1 text-body" *ngFor="let subSection of section.subSections">
-          <a class="text-body" [routerLink]="[section.ref, subSection.ref]">{{subSection.name}}</a></li>
+          <a class="text-body" [routerLink]="['/', 'continuous', section.id, subSection.id]">{{subSection.name}}</a></li>
           </ul>
           <div class="pt-3">
-            <span class="p-1 text-secondary" *ngFor="let link of section.links; let i = index"><small><a class="text-secondary" [attr.href]="link.ref">{{link.name}}</a></small><span *ngIf="i < section.links.length-1" class="pl-1">|</span></span>
+            <span class="p-1 text-secondary" *ngFor="let link of section.links; let i = index"><small><a target="_blank" class="text-secondary" [attr.href]="link.id">{{link.name}}</a></small><span *ngIf="i < section.links.length-1" class="pl-1">|</span></span>
           </div>
         </div>
       </div>
     </div>
     <div class="col-12 p-3 text-center">
-      <img src="assets/img/general-picture.png" class="img-fluid shadow">
+      <img src="assets/img/big-picture.png" class="img-fluid shadow">
     </div>
   </div>
 </div>

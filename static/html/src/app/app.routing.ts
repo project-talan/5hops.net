@@ -1,23 +1,15 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
-import { IntegrationComponent } from './pages/integration/integration.component';
-import { TestingComponent } from './pages/testing/testing.component';
-import { DeliveryComponent } from './pages/delivery/delivery.component';
-import { DeploymentComponent } from './pages/deployment/deployment.component';
-import { OperationComponent } from './pages/operation/operation.component';
+import { HopComponent } from './pages/hop/hop.component';
+import { ArticleComponent } from './pages/article/article.component';
 import { FaqComponent } from './pages/faq/faq.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'continuous-integration', component: IntegrationComponent },
-  { path: 'continuous-integration/:subSection', component: IntegrationComponent },
-  { path: 'continuous-testing', component: TestingComponent },
-  { path: 'continuous-delivery', component: DeliveryComponent },
-  { path: 'continuous-deployment', component: DeploymentComponent },
-  { path: 'continuous-operation', component: OperationComponent },
   { path: 'faq', component: FaqComponent },
-
+  { path: 'continuous/:hop', component: HopComponent },
+  { path: 'continuous/:hop/:article', component: ArticleComponent },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ];
