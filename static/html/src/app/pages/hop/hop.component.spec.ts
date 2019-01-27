@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { HopComponent } from './hop.component';
+import { Content } from './../../app.toc';
 
 describe('HopComponent', () => {
   let component: HopComponent;
@@ -20,6 +21,7 @@ describe('HopComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HopComponent);
     component = fixture.componentInstance;
+    component.section = Content.sections[0];
     fixture.detectChanges();
   });
 

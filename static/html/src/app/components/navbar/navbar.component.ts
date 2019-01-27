@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Link, SubSection, Section, Toc } from './../../models/toc';
-import { Sections } from './../../app.toc';
+import { Content } from './../../app.toc';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
   @Input() hop: string;
   @Input() article: string;
 
-  hops: Section[] = Sections;
+  hops: Section[] = Content.sections;
 
   constructor() {
   }
@@ -24,6 +24,10 @@ export class NavbarComponent implements OnInit {
      console.log(this.article);
      console.log(this.hops);
 */
+  }
+
+  capitalizeFirstLetter(str): string {
+    return str[0].toUpperCase() + str.slice(1);
   }
 
 }

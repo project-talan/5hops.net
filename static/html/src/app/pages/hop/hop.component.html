@@ -1,16 +1,23 @@
-<div class="bg-success">{{getHop()}}</div>
 <app-navbar [hop]="getHop()" [article]="''"></app-navbar>
-
 <div class="container">
-  <!--div class="row pt-4" *ngFor="let subs of subSections; let i = index">
-    <div class="col-12">
-      <h2 class="pb-3 mb-4 border-bottom">{{subs.name}}</h2>
+  <div class="row pt-4">
+    <div class="col-12 text-right">
+      <h5 class="font-italic">{{section.description}}</h5>
     </div>
-    <div class="col-6">
-      Test
+    <div class="col-12 mb-4">
+      <h3>{{section.title}}</h3>
     </div>
-    <div class="col-6">
-      <img src="assets/img/methodologies.png" class="img-fluid shadow">
+  </div>
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let subs of section.subSections; let i = index">
+      <div class="card">
+        <img class="card-img-top mt-4" src="assets/img/notfound.png">
+        <div class="card-body">
+          <h5 class="card-title">{{subs.title}}</h5>
+          <p class="card-text">{{subs.description}}</p>
+          <a class="btn btn-link float-right" [routerLink]="['/', 'continuous', section.id, subs.id]">Continue reading</a>
+        </div>
+      </div>
     </div>
-  </div-->
+  </div>
 </div>

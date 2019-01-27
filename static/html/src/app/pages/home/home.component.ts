@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Link, SubSection, Section, Toc } from './../../models/toc';
-import { Sections } from './../../app.toc';
+import { Content } from './../../app.toc';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ import { Sections } from './../../app.toc';
 })
 export class HomeComponent implements OnInit {
 
-  sections: Section[] = Sections;
+  sections: Section[] = Content.sections;
   constructor() { }
 
   ngOnInit() {
