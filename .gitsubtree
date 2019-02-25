@@ -1,4 +1,0 @@
-#!/bin/bash
-
-git subtree pull --prefix static/html tln-angular master --squash
-
